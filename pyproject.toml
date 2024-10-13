@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tests"
+version = "0.1.0"
+description = "simple file reader"
+authors = ["Tom Welsh <twelsh37@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+argparse = "^1.4.0"
+openpyxl = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
