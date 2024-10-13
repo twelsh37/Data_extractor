@@ -1,6 +1,6 @@
 # extract_column.py
 
-This sis a simple utility that extracts a particular column of data fromk a csv or xls* file.
+This is a simple utility that extracts a particular column of data from a csv or xls* file and either displays the data to the screen or oytputs it to a text file that the user specifies.
 
 ## Usage
 You need python on your device to run this code. It is easily involed on the command line
@@ -11,15 +11,17 @@ python extract_column.py -h
 This command displays the available comand line arguments
 ```
 python extract_column.py -h
-usage: extract_column.py [-h] (-c CSV | -e EXCEL)
+usage: extract_column.py [-h] (-c CSV | -e EXCEL) [-o OUTPUT]
 
 Extract column data from CSV or Excel files.
 
 options:
   -h, --help            show this help message and exit
-  -c CSV, --csv CSV     Read CSV file
+  -c CSV, --csv CSV     Input CSV file
   -e EXCEL, --excel EXCEL
-                        Read Excel file
+                        Input Excel file
+  -o OUTPUT, --output OUTPUT
+                        Output file to write the data
 ```
 
 ## Running the file
@@ -50,9 +52,17 @@ Available headers:
 Enter the number of the header you want to extract (1-6): 4
 ```
 
-Select the header you are interested in , in our case we are interested in teh email address field, option 4.
-hitting return will provide you a list of email addrsses on screen
+Select the header you are interested in , in our case we are interested in the email address field, option 4.
+hitting return will provide you a list of email addresses on screen
 
 ![image](https://github.com/user-attachments/assets/03fc8156-8fa4-46e4-a207-0542efbd2118)
 
+## Output to a file
 
+You can also output the data to a file by specifying the output file name using the -o flag
+
+```
+python extract_column.py -c test-data-1.csv -o outputfile.txt
+``` 
+
+This will create a file called outputfile.txt in the current working directory with the email addresses
